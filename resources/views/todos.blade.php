@@ -9,6 +9,26 @@
 @section('content')
 <div class="card">
   <div class="card-body">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="dataTables_length" id="table_length">
+          <label style="font-weight: normal; text-align: left; white-space: nowrap;">Show <select name="table_length" aria-controls="table" class="custom-select custom-select-sm form-control form-control-sm">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+          entries</label>
+        </div>
+      </div>
+          <div class="col-sm-12 col-md-6">
+            <div id="table_filter" class="dataTables_filter">
+              <label style="font-weight: normal; white-space: nowrap; text-align: left; float: right;">Search:
+                <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="table" style="margin-left: 0.5em; display: inline-block; width: auto;">
+              </label>
+            </div>
+          </div>
+        </div>
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
