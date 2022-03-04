@@ -34,6 +34,10 @@ Route::get('/events-feed', function () {
     return view('events-feed');
 });
 
+Route::fallback(function () {
+  return view(view: 'error');
+});
+
 Route::get('/db-test', function() {
     try {
         \DB::connection()->getPDO();
