@@ -231,7 +231,7 @@ return [
         [
             'text' => 'To Do\'s',
             'url'  => 'todos',
-            'icon' => 'fas fa-fw fa-file',
+            'icon' => 'far fa-fw fa-list-alt',
         ],
         [
             'text' => 'Calendar',
