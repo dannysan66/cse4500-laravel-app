@@ -51,7 +51,7 @@ Route::get('/db-migrate', function() {
 
 Route::resource('/todos', TodoController::class);
 
-Route::resource('/eventslist', CalendarController::class);
+Route::resource('/eventsfeed', CalendarController::class);
 
 Route::fallback(function () {
   return view(view: 'error');
