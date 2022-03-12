@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TodoController;
+use App\Http\Controllers\CalendarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,9 +37,8 @@ Route::get('/events-feed', function () {
 
 use App\Http\Controllers\TodoController;
 Route::resource('/todos', TodoController::class);
+Route::resource('/eventslist', CalendarController::class);
 
-use App\Http\Controllers\CalendarController;
-Route::resource('/todos', CalendarController::class);
 
 Route::get('/db-test', function() {
     try {
