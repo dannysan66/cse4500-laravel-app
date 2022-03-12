@@ -37,8 +37,8 @@ Route::get('/events-feed', function () {
 use App\Http\Controllers\TodoController;
 Route::resource('/todos', TodoController::class);
 
-
-
+use App\Http\Controllers\CalendarController;
+Route::resource('/todos', CalendarController::class);
 
 Route::get('/db-test', function() {
     try {
@@ -50,14 +50,10 @@ Route::get('/db-test', function() {
     }
 });
 
-
-
 Route::get('/db-migrate', function() {
     Artisan::call('migrate');
     echo Artisan::output();
 });
-
-
 
 Route::fallback(function () {
   return view(view: 'error');
