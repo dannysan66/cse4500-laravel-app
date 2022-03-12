@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Calendar extends Model
 {
     protected $fillable = ['title','startTime', 'endTime'];
-    protected $table = 'calendar';
+    protected $table = 'events';
     use HasFactory;
 }
