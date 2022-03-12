@@ -34,7 +34,7 @@ $calendar = Calendar::addEvents($events);
      */
     public function create()
     {
-        //
+          return view('todos.create');
     }
 
     /**
