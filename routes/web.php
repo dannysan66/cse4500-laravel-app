@@ -17,7 +17,6 @@ use App\Http\Controllers\CalendarController;
 Route::get('/', function () {
     return view('welcome');
 });
-URL::forceScheme('https');
 
 Route::get('/todos', function () {
     return view('todos');
@@ -35,11 +34,6 @@ Route::get('/events-feed', function () {
     return view('events-feed');
 });
 
-use App\Http\Controllers\TodoController;
-Route::resource('/todos', TodoController::class);
-Route::resource('/eventslist', CalendarController::class);
-
-
 Route::get('/db-test', function() {
     try {
         \DB::connection()->getPDO();
@@ -55,6 +49,12 @@ Route::get('/db-migrate', function() {
     echo Artisan::output();
 });
 
+Route::resource('/todos', TodoController::class);
+
+Route::resource('/eventslist', CalendarController::class);
+
 Route::fallback(function () {
   return view(view: 'error');
 });
+
+URL::forceScheme('https');
